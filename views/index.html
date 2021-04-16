@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Covid Vaccine Tracker</title>
+        <link href="styles/styles.css" rel="stylesheet"> 
+
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Covid Vaccine Tracker</h1> 
+        <img src="images/vaccine_image.jpg" alt="My test image" width="600" height="300" class="center">
+        <h2 id="insertSm"></h2> 
+        <p>This is a Covid vaccine online tracker. Please fill in the form to help us beat this virus!</p>
+
+        <form class ="form" name="SRForm" method="post" onsubmit="return condensed_formsub();"> 
+                <legend>Vaccination tracking form</legend> 
+                <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="fname" value="" placeholder="Enter Name"><br>
+                <label for="sname">Surname:</label><br>
+                <input type="text" id="sname" name="sname" value="" placeholder="Enter Surname"/><br>
+                <label for="date">Date of vaccination:</label><br>
+                <input type="date" id="date" name="date" min="2020-01-01" value=""><br> <!--a bit of error handling: set a min date-->
+                
+                <label for="Vaxadmin">Name of vaccine:</label><br>
+                <select id="Vaxadmin" name="Vaxadmin">
+                    <option value=""selected>Select Vaccine</option>
+                    <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Johnson&Johnson">Johnson&Johnson</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Other">Other</option>
+                </select> 
+                
+                
+                <br>
+                <label for="pvax">Place of vaccination:</label><br>
+                <input type="text" id="pvax" name="pvax" value="" placeholder="Vaccination station"><br><br>
+                <input type="submit" value="Submit"/> 
+            </form>
+          
+            <br>
+            <br>
+            <table class="center" style="width:80%" id="tbl">
+                <tr>
+                  <th>Firstname</th>
+                  <th>Surname</th>
+                  <th>Vacinnation date</th>
+                  <th>Vaccine</th>
+                  <th>Place</th>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <img src="images/Staying-Safe-Together.png" alt="My test image" width="600" height="300">
+
+              <form name="form1" method="post" onsubmit="return processFormSubmission();" action="/" ></form>
+    </body>
+    <br>
+    <br>
+    <br>
+    <script src="scripts/main.js"></script>
+</html>
